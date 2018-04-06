@@ -1,0 +1,68 @@
+Chief Hopper
+by shashank21j
+Problem
+Submissions
+Leaderboard
+Discussions
+Editorial 
+Chief's bot is playing an old DOS-based game. There are  buildings in the game - indexed from  to and are placed left-to-right. It is guaranteed that building with index  will be of height  unit. For buildings with index  () height will be  units. 
+
+At beginning Chief's bot is at building with index . At each step, bot jumps to next (right) building. Suppose bot is at  building and his current energy is , then in next step he will jump to building. He will gain/lose energy equal in amount to difference between  and 
+
+If , then he will lose  units of energy.
+Otherwise, he will gain  units of energy.
+Goal is to reach  building, and during the course bot should never have negative energy units. What should be the minimum units of energy with which bot should start to successfully complete the game?
+
+Input Format
+
+The first line contains integer . Next line contains  space separated integers representing the heights of the buildings.
+
+Constraints
+
+Output Format
+
+Print a single integer representing minimum units of energy required to complete the game.
+
+Sample Input 0
+
+5
+3 4 3 2 4
+Sample Output 0
+
+4
+Explanation 0
+
+If initial energy is 4, after step 1 energy is 5, after step 2 it's 6, after step 3 it's 9 and after step 4 it's 16, finally at step 5 it's 28. 
+You can verify for lower initial energy bot will have -ve energy in the end.
+
+Sample Input 1
+
+3
+4 4 4
+Sample Output 1
+
+4
+Explanation 1
+
+In the second test case if bot has energy 4, it's energy is changed by (4 - 4 = 0) at every step and remains 4.
+
+
+
+
+
+
+**********************************************************************************************************************
+**********************************************************************************************************************
+
+so if,   
+    height:  0  3  4  3  2  4
+  building:  0  1  2  3  4  5
+
+here, Needed Energy = Energy you have + (Energy you have - Height to jump)
+
+....using this, start from the last building because, for that building you can set Needed Energy equal to 0 and calculate Energy you have(to have)....and work your way back to find the intital energy you need to start with
+
+
+***********************************************************************************************************************
+
+https://www.hackerrank.com/challenges/chief-hopper/problem
